@@ -61,6 +61,7 @@ class MusicLibraryController
   end
   
   def list_songs_by_artist
+<<<<<<< HEAD
         puts "Please enter the name of an artist:"
         user_input = gets.strip
         #when user inputs artist, return numbered(alphebatized) list of artist and genre
@@ -95,6 +96,14 @@ class MusicLibraryController
           puts "Playing #{index.name} by #{index.artist.name}"
         end
       end
+=======
+    puts "Please enter the name of an artist:"
+    input = gets.chomp
+    list = Artist.find_by_name(input)
+    binding.pry
+    if Artist.all.include?!(input)
+      puts "Please enter the name of an artist:"
+>>>>>>> b65f2a3d8eb07f9a87b154b404769ba59228d711
     else
     end
   end
